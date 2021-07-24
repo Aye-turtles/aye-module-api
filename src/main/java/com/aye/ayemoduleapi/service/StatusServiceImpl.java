@@ -17,7 +17,7 @@ public class StatusServiceImpl implements StatusService {
     private StatusLogic statusLogic;
 
     @Override
-    @RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "", method = RequestMethod.GET, produces = "application/json")
     public List<StatusDto> findAllStatus() {
         return statusLogic.findAllStatus();
     }

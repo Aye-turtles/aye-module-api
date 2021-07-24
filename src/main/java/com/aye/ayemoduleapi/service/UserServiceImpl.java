@@ -18,7 +18,7 @@ public class UserServiceImpl implements UserService {
    private UserLogic userLogic;
 
     @Override
-    @RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "", method = RequestMethod.GET, produces = "application/json")
     public List<UserDto> findAllUsers() {
         return userLogic.findAllUsers();
     }

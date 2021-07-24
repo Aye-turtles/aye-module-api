@@ -18,7 +18,7 @@ public class NestLogsServiceImpl implements NestLogsService {
     private NestLogsLogic nestLogsLogic;
 
     @Override
-    @RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "", method = RequestMethod.GET, produces = "application/json")
     public List<NestLogsDto> findAllNestsLogs() {
         return nestLogsLogic.findAllNestsLogs();
     }
