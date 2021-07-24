@@ -18,4 +18,5 @@ public class NestLogicImpl implements NestLogic {
     public List<NestDto> findAllNests() {
         return nestClient.findAllNests();
     }
+
 }

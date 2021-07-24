@@ -1,6 +1,8 @@
 spring:
   application:
     name: aye-modulo-api
+  main:
+    allow-bean-definition-overriding: true
 
 eureka:
   client:

@@ -1,7 +1,7 @@
 package com.aye.ayemoduleapi.service;
 
-import com.aye.ayemoduleapi.dto.NestDto;
-import com.aye.ayemoduleapi.logic.NestLogic;
+import com.aye.ayemoduleapi.dto.UserDto;
+import com.aye.ayemoduleapi.logic.UserLogic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -9,16 +9,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
-@RequestMapping("nest/")
-public class NestServiceImpl implements NestService {
 
-    @Autowired
-    private NestLogic nestLogic;
+@RestController
+@RequestMapping("user/")
+public class UserServiceImpl implements UserService {
+
+   @Autowired
+   private UserLogic userLogic;
 
     @Override
     @RequestMapping(value = "", method = RequestMethod.GET, produces = "application/json")
-    public List<NestDto> findAllNests() {
-        return nestLogic.findAllNests();
+    public List<UserDto> findAllUsers() {
+        return userLogic.findAllUsers();
     }
 }
