@@ -1,7 +1,7 @@
 package com.aye.ayemoduleapi.service;
 
-import com.aye.ayemoduleapi.dto.NestDto;
-import com.aye.ayemoduleapi.logic.NestLogic;
+import com.aye.ayemoduleapi.dto.StatusDto;
+import com.aye.ayemoduleapi.logic.StatusLogic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -10,15 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("nest/")
-public class NestServiceImpl implements NestService {
+@RequestMapping("status/")
+public class StatusServiceImpl implements StatusService {
 
     @Autowired
-    private NestLogic nestLogic;
+    private StatusLogic statusLogic;
 
     @Override
     @RequestMapping(value = "/", method = RequestMethod.GET, produces = "application/json")
-    public List<NestDto> findAllNests() {
-        return nestLogic.findAllNests();
+    public List<StatusDto> findAllStatus() {
+        return statusLogic.findAllStatus();
     }
 }
